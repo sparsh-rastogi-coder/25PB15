@@ -7,9 +7,9 @@ git clone https://huggingface.co/datasets/roskoN/dailydialog
 extract train test and validation from the folders manually
 
 # fill the .env file with
-test_data_dir = "Write test data directory path here"
-validation_data_dir ="write validation data directory path here"
-train_data_dir ="write train data directory path here"
+test_data_dir = Write test data directory path here(in python format)
+validation_data_dir =write validation data directory path here(in python format)
+train_data_dir =write train data directory path here(in python format)
 
 # create python enviorment
 cd code

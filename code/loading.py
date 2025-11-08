@@ -2,15 +2,23 @@ import os
 import pandas as pd
 from dotenv import load_dotenv
 
-print('Data source import complete.')
-
-
-# Load environment variables from .env file
 load_dotenv()
-# ✅ Use raw string to avoid invalid escape sequences
+
+# Use os.path.join if needed
 test_data_dir = os.getenv("test_data_dir")
-validation_data_dir =os.getenv("validation_data_dir")
-train_data_dir =os.getenv("train_data_dir")
+validation_data_dir = os.getenv("validation_data_dir")
+train_data_dir = os.getenv("train_data_dir")
+
+print("Test dir:", test_data_dir)
+print("Validation dir:", validation_data_dir)
+print("Train dir:", train_data_dir)
+
+# Optional: verify existence
+for path in [test_data_dir, validation_data_dir, train_data_dir]:
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Missing directory: {path}")
+
+print("✅ All dataset directories verified.")
 
 # ✅ Check if required files exist
 required_test_files = [
