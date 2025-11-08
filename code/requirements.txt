@@ -1,0 +1,4 @@
+kagglehub==0.3.13
+pandas==2.2.2
+transformers==4.57.1
+huggingface_hub==0.36.0
