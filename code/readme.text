@@ -4,10 +4,17 @@ cd 25PB15
 
 git clone https://huggingface.co/datasets/roskoN/dailydialog
 
-extract train test and validation from 
+extract train test and validation from the folders 
 
+# fill the .env file with
+test_data_dir = "Write test data directory path here"
+validation_data_dir ="write validation data directory path here"
+train_data_dir ="write train data directory path here"
+
+# create python enviorment
+python -m venv emotion_env 
 emotion_env\Scripts\activate
-
 pip install -r requirements.txt
 
+# run 
 python loading.py

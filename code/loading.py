@@ -1,12 +1,16 @@
 import os
 import pandas as pd
+from dotenv import load_dotenv
 
 print('Data source import complete.')
 
+
+# Load environment variables from .env file
+load_dotenv()
 # ✅ Use raw string to avoid invalid escape sequences
-test_data_dir = "Write test data directory path here"
-validation_data_dir ="write validation data directory path here"
-train_data_dir ="write train data directory path here"
+test_data_dir = os.getenv("test_data_dir")
+validation_data_dir =os.getenv("validation_data_dir")
+train_data_dir =os.getenv("train_data_dir")
 
 # ✅ Check if required files exist
 required_test_files = [
